@@ -16,8 +16,12 @@ const Modal = ({
   children,
 }: ModalProps) => {
   return (
-    <main className="absolute min-h-screen inset-0 bg-black bg-opacity-50 z-10">
-      <div className="relative w-[50%] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 rounded-md shadow-md bg-white z-999">
+    <main className="absolute inset-0 z-0 flex items-center justify-center">
+      <div
+        onClick={closeModal}
+        className="w-full h-full bg-black bg-opacity-50 z-10"
+      ></div>
+      <div className="fixed w-[50%] h-fit rounded-md shadow-md bg-white z-20">
         <div className="grid p-8 gap-4">
           <div className="absolute w-8 h-8 right-0 top-0 translate-x-[50%] -translate-y-[50%] bg-white rounded-full duration-300 cursor-pointer hover:scale-95">
             <RiCloseCircleFill
